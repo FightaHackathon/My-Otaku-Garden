@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in and Sign up</title>
+    <link rel="stylesheet" href="form.css">
+</head> 
+<body>
+    <h2>Log in or sign up to our OTAKU Garden</h2>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+          <form action="process.php" method="post">
+            <h1>Create Account</h1>
+      <!-- <div class="social-container">
+        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <span>or use your email for registration</span> -->
+                <input type="text" placeholder="Name" id = "username" required name = "username">
+                <input type="email" placeholder="Email" id = "email" required name = "email">
+                <input type="password" placeholder="Password" id ="password" required name = "password">
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+
+          
+          <form action="login.php" method="POST">
+            <input type="hidden" name="signin" value="1"> <!-- Add this hidden field to indicate signin -->
+                        <h1>Sign in</h1>
+            <!-- <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <span>or use your account</span> -->
+                <input type="text" placeholder="Email" required class = "form-control" name="email">
+                <input type="password" placeholder="Password" required class = "form-control" name="password">
+
+                <a href="#">Forgot your password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- <footer>
+  <p>
+    Created with <i class="fa fa-heart"></i> by
+    <a target="_blank" href="https://florin-pop.com">Florin Pop</a>
+    - Read how I created this and how you can join the challenge
+    <a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
+  </p>
+</footer> -->
+
+<script src="form.js">
+    document.getElementById('signup-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const user_email = document.getElementById('email').value;
+      
+      const response = await fetch('/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password , user_email})
+      });
+    
+      const data = await response.json();
+      console.log(data.message);
+    });
+</script>
+
+<!-- <script>
+    document.getElementById('signup-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const user_email = document.getElementById('user_email').value;
+
+      const response = await fetch('/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password , user_email})
+      });
+    
+      const data = await response.json();
+      console.log(data.message);
+    });
+
+    </script> -->
+</body>
+</html>
