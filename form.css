@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Roboto&display=swap');
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-image: url(../image/0bd54c1b9cf1122aa0cf8e1217aedcde.jpeg);
+  background-image: url(image/0bd54c1b9cf1122aa0cf8e1217aedcde.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -13,7 +13,7 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
-  height: 100vh;
+  height: 118vh;
   margin: -20px 0 50px;
 }
 
@@ -25,6 +25,7 @@ h1 {
 h2 {
   padding-top: 50px;
   text-align: center;
+  margin-top: 20px;
 }
 
 p {

@@ -1,12 +1,13 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+    ?>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in and Sign up</title>
     <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="style1.css">
 </head> 
 <body>
     <h2>Log in or sign up to our OTAKU Garden</h2>
@@ -14,7 +15,12 @@
         <div class="form-container sign-up-container">
           <form action="process.php" method="post">
             <h1>Create Account</h1>
-      
+      <!-- <div class="social-container">
+        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <span>or use your email for registration</span> -->
                 <input type="text" placeholder="Name" id = "username" required name = "username">
                 <input type="email" placeholder="Email" id = "email" required name = "email">
                 <input type="password" placeholder="Password" id ="password" required name = "password">
@@ -22,12 +28,15 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-
-          
           <form action="login.php" method="POST">
             <input type="hidden" name="signin" value="1"> <!-- Add this hidden field to indicate signin -->
                         <h1>Sign in</h1>
-            
+            <!-- <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <span>or use your account</span> -->
                 <input type="text" placeholder="Email" required class = "form-control" name="email">
                 <input type="password" placeholder="Password" required class = "form-control" name="password">
 
