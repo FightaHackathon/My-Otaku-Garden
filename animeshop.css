@@ -1,0 +1,26 @@
+body {
+    background-color: rgba(109, 194, 109, 0.5);;
+    background-image: url(https://wallpaper.dog/large/10853535.jpg);
+    background-blend-mode: multiply; /* Blend mode to apply the color on top of the image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+} 
+.see {
+    font-size: small;
+    text-decoration: none;
+}
+.see:hover {
+    text-decoration: underline;
+}
+.tra {
+    font-size: 20px;
+    text-decoration: none;
+}
+.tra:hover {
+    text-decoration: underline;
+}
+.footanime {
+    margin-top: 2700px;
+}
