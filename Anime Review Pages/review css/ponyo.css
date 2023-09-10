@@ -6,7 +6,8 @@ body, h1, h2, h3, p, ul, li {
   
   /* Set background colors */
   body {
-    background-color: #aeffbc; /* Green Yellow */
+    /* background-color: #aeffbc; Green Yellow */
+    background-color: #B2D3A1;
     font-family: 'Arial', sans-serif; /* Fallback font */
   }
   
@@ -26,7 +27,16 @@ body, h1, h2, h3, p, ul, li {
   }
   
   /* English and Myanmar review sections */
-  .review-section {
+  #review-section {
+    background-color: #f0fff0; /* Green Yellow */
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #008000; /* Green */
+    border-radius: 10px;
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif; /* Cute font for reviews */
+  }
+  .myanmar-review {
     background-color: #f0fff0; /* Green Yellow */
     padding: 20px;
     margin: 20px;
@@ -38,11 +48,8 @@ body, h1, h2, h3, p, ul, li {
   
   /* Photo section */
   
-  
-  
-  
  /* DVD section */
- .dvd-section {
+ #dvd-section {
     text-align: center;
     margin-top: 20px;
 }
@@ -63,7 +70,7 @@ body, h1, h2, h3, p, ul, li {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("https://thumbs.gfycat.com/FantasticOrangeFlyinglemur-size_restricted.gif"); /* Replace with the actual path */
+    background-image: url("https://24.media.tumblr.com/f61cfa5eefbcd3949a5745be83451213/tumblr_miojm3IcNx1s6exp6o1_500.gif");
     opacity: 0.3; /* Adjust opacity as needed */
     pointer-events: none; /* Allow clicking through the pseudo-element */
     z-index: -1;
@@ -119,56 +126,13 @@ body, h1, h2, h3, p, ul, li {
   }
   
 /* Photo section */
-/* Photo section */
-/* Photo section */
-/* Photo section */
-
-
-/* Section and subsection headings */
-.section-heading {
+.photo-section {
+    background-color: #f0fff0; /* Green Yellow */
+    padding: 15px; /* Increased padding for spacing */
+    border: 2px solid #008000; /* Green */
+    border-radius: 10px;
     text-align: center;
-    margin-top: 20px;
 }
-
-/* Photo section content */
-.photo-section-content {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-/* Figures and Anime Pics sections */
-.figures, .anime-pics {
-    flex: 0 0 calc(50% - 10px);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Figure and Anime item */
-.figure-item, .anime-item {
-    width: 80%; /* Adjust width as needed */
-    max-height: 160px; /* Adjust max height as needed */
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin: 0 auto; /* Center items horizontally within their containers */
-    border: 3px solid #008000; /* Border color matching the theme */
-    border-radius: 15px;
-}
-
-.figure-item img, .anime-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.figure-item:hover, .anime-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Increased shadow */
-}
-
-
-
-
 
 .anime-details {
     background-color: #f0fff0; /* Green Yellow */
@@ -179,7 +143,7 @@ body, h1, h2, h3, p, ul, li {
     text-align: center;
 }
 
-.trailer-section {
+#trailer-section {
     text-align: center;
     margin-top: 20px;
 }
@@ -216,66 +180,72 @@ body, h1, h2, h3, p, ul, li {
 
 /* ... Your existing CSS ... */
 
-/* Photo slider container */
-.slider-container {
+.carousel-container {
+    width: 900px;
+    height: 600px;
     position: relative;
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-}
-
-/* Photo slider */
-.slider {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    position: relative; /* Enable relative positioning for buttons */
-}
-
-.slide {
-    flex: 0 0 100%;
-    text-align: center; /* Center images horizontally */
+    margin: 0 auto;
     
-}
-
-.slide img {
-    width: 600px; /* Set the desired width */
-    height: 480px; /* Set the desired height */
-    object-fit: cover;
-    border: 3px solid #008000; /* Border color matching the theme */
-    border-radius: 15px;
-}
-
-/* Navigation buttons */
-.prev-button, .next-button {
+    }
+    
+    .navigation .prev {
+    position: absolute;
+    z-index: 10;
+    font-size: 25px;
+    top: 40%;
+    left: 10px;
+    font-weight: 700;
+    }
+    .navigation .next {
+    right: 10px;
+    position: absolute;
+    font-size: 25px;
+    z-index: 10;
+    top: 40%;
+    }
+    .navigation .nav-btn {
+    background: rgba(255, 255, 255, 0.55);
     cursor: pointer;
-    padding: 10px;
-    background-color: #f0fff0; /* Green Yellow */
-    color: black; /* Text color */
-    border: 2px solid #008000; /* Green */
-    border-radius: 50%; /* Round buttons */
-    font-size: 20px; /* Larger font size */
-    position: absolute; /* Absolute positioning within a relatively positioned container */
-    bottom: -40%; /* Position buttons vertically at the middle */
-    transform: translateY(-30%); /* Adjust vertical position */
-}
-
-.prev-button {
-    left: 10px; /* Position previous button to the left */
-}
-
-.next-button {
-    right: 10px; /* Position next button to the right */
-}
-
-.prev-button:hover, .next-button:hover {
-    background-color: #008000; /* Green */
-    color: white;
-}
-
-.prev-button::before {
-    content: "\2190"; /* Left arrow character */
-}
-
-.next-button::before {
-    content: "\2192"; /* Right arrow character */
-}
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    }
+    .navigation .nav-btn:hover {
+    background: white;
+    }
+    
+    .carousel {
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    
+    }
+    .carousel img {
+    width: 100%;
+    transition: all 0.3s ease;
+    /* border:8px solid white; */
+    width: 900px;
+    height: 600px;
+    }
+    
+    .item {
+    position: absolute;
+    display: none;
+    }
+    
+    .main {
+    display: block;
+    }
+    a.back {
+      display: inline;
+  }
+  .H {
+      float: left;
+  }
+  .M {
+      float: right;
+  }

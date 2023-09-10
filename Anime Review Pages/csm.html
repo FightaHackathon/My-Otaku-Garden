@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="animereview.css">
+    <link rel="stylesheet" href="review css/csm.css">
     <title>Anime Review Page</title>
 
 </head>
 <body>
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function() {
             const imageLinks = document.querySelectorAll("#image-links img");
             imageLinks.forEach(image => {
@@ -20,7 +20,7 @@
                 image.parentNode.replaceChild(imageLink, image);
             });
         });
-        </script>
+        </script> -->
     <div class="header" style="background-image: url('https://wallpapercave.com/wp/wp11388278.jpg'); background-size: cover; background-position: center;">
         <h1>Anime Review: Chainsaw-Man</h1>
     </div>
@@ -37,14 +37,14 @@
     </div> 
 
 
-        <div class="review-section english-review">
+        <div id="review-section">
             <h2>English Review</h2>
             <p>Denji has a simple dream—to live a happy and peaceful life, spending time with a girl he likes. This is a far cry from reality, however, as Denji is forced by the yakuza into killing devils in order to pay off his crushing debts. Using his pet devil Pochita as a weapon, he is ready to do anything for a bit of cash.</p>
 
              <p>  Unfortunately, he has outlived his usefulness and is murdered by a devil in contract with the yakuza. However, in an unexpected turn of events, Pochita merges with Denji's dead body and grants him the powers of a chainsaw devil. Now able to transform parts of his body into chainsaws, a revived Denji uses his new abilities to quickly and brutally dispatch his enemies. Catching the eye of the official devil hunters who arrive at the scene, he is offered work at the Public Safety Bureau as one of them. Now with the means to face even the toughest of enemies, Denji will stop at nothing to achieve his simple teenage dreams.</p>
              <p>Rating: ⭐️⭐️⭐️⭐️⭐️ (5/5)</p>
         </div>
-        <div class="review-section myanmar-review">
+        <div class="myanmar-review">
             <h2>Myanmar Review</h2>
             <p>
                 နှစ်သက်ရသောမိန်းကလေးတစ်ဦးနဲ့ ရိုးရှင်းပြီးငြိမ်းချမ်းတဲ့ဘဝလေးကို ဖြတ်သန်းချင်တဲ့အိမ်မက်ရှိသော Denji-kun ဟာ ဘဝပေးအခြေအနေကြောင့် အကြွေးဆပ်ဖိုအတွက် မကောင်းဆိုးဝါးတွေ(မိစ္ဆာတွေကို) -တ်ဖြတ်ဖိုအတွက် ယာကူဆာတွေဖိအားပေးခြင်းကို ခံနေရတာပဲဖြစ်ပါတယ်။ 
@@ -54,45 +54,32 @@
         </div>
     </div>
  </div> 
- <div id="image-links">
-    <div class="photo-section">
-        <h2 class="section-heading">Photos</h2>
-        <div class="photo-slider">
-            <div class="slider">
-                <!-- Figure Images -->
-                <div class="slide">
-                    <img src="Figure Images/csm1.jpg" alt="Figure Photo 1">
-                </div>
-                <div class="slide">
-                    <img src="Figure Images/csm2.jpg" alt="Figure Photo 2">
-                </div>
-                <div class="slide">
-                    <img src="Figure Images/csm3.jpg" alt="Figure Photo 3">
-                </div>
 
-                <!-- Anime Review Images -->
-                <div class="slide">
-                    <img src="Review Images/csm1.jpg" alt="Anime Photo 1">
-                </div>
-                <div class="slide">
-                    <img src="Review Images/csm2.webp" alt="Anime Photo 2">
-                </div>
-                <div class="slide">
-                    <img src="Review Images/csm3.jpg" alt="Anime Photo 3">
-                </div>
-                <div class="slide">
-                    <img src = "Review Images/csm4.jpg" alt = "Anime Photo 4">
-                </div>
-            </div>
-        </div>
+ <div class="carousel-container"> 
+    <div class="navigation">
+      <div class="prev nav-btn"><</div>
+      <div class="next nav-btn">></div>
     </div>
-    <button class="prev-button">Previous</button>
-    <button class="next-button">Next</button>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="./slider.js"></script>
-        <div class="trailer-section">
+    <div class="carousel">
+      <div class="item main">
+        <img src="Review Images/csm2.webp" alt="tr2" />
+      </div>
+      <div class="item">
+        <img src="Review Images/csm3.jpg" alt="tr3" />
+      </div>   
+      <div class="item">
+        <img src="Review Images/csm4.jpg" alt="tr3" />
+      </div>     
+      <div class="item">
+        <img src="Review Images/csm5.jpg" alt="tr3" />
+      </div>
+      <div class="item">
+        <img src="Review Images/csm6.jpg" alt="tr3" />
+      </div>
+    </div>
+  </div>
+ 
+        <div id="trailer-section">
             <div class="trailer-box">
                 <h2>Watch the Trailer for Chainsaw-Man Here!</h2>
                 <div class="video-container">
@@ -100,7 +87,7 @@
                 </div>
             </div>
         </div>
-        <div class="dvd-section">
+        <div id="dvd-section"> 
             <div class="dvd-box">
                 <h2>Get YOUR Chain-Saw Man DVDs Now!</h2>
                 <p><b>NOTICE!! SEASON 2 IS ON PLANS!</b></p>
@@ -111,8 +98,12 @@
                     </div>
                     <!-- Add more DVD items as needed -->
                 </div>
+                <a href="../home.html" class="back H">&lt;&lt;Back to Home</a>
+                <a href="../animeshop.html" class="back M">Back to Menu>></a>
             </div>
         </div>
+        
  </div>
+ <script type="text/javascript" src="review js/spyxfamily.js"></script>
 </body>
 </html>

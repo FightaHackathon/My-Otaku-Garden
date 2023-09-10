@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <script>
+    <!-- <script src="review js/spyxfamily.js">
         document.addEventListener("DOMContentLoaded", function() {
             const imageLinks = document.querySelectorAll("#image-links img");
             imageLinks.forEach(image => {
@@ -20,7 +20,10 @@
                 image.parentNode.replaceChild(imageLink, image);
             });
         });
-        </script>
+
+    </script> -->
+
+        
     <div class="header" style="background-image: url('https://moewalls.com/wp-content/uploads/2023/04/sunday-picnic-spy-x-family-thumb.jpg'); background-size: cover; background-position: center;">
         <h1>Anime Review: Spy X Family</h1>
     </div>
@@ -37,7 +40,7 @@
     </div> 
 
 
-        <div class="review-section english-review">
+        <div id="review-section">
             <h2>English Review</h2>
             <p>Corrupt politicians, frenzied nationalists, and other warmongering forces constantly jeopardize the thin veneer of peace between neighboring countries Ostania and Westalis. In spite of their plots, renowned spy and master of disguise "Twilight" fulfills dangerous missions one after another in the hope that no child will have to experience the horrors of war.</p>
 
@@ -46,7 +49,7 @@
              <p>  Unfortunately for Loid, even a man of his talents has trouble playing the figure of a loving father and husband. And just like Loid is hiding his true identity, Yor—who is an underground assassin known as "Thorn Princess"—and Anya—an esper who can read people's minds—have no plans to disclose their own secrets either. Although this picture-perfect family is founded on deception, the Forgers gradually come to understand that the love they share for one another trumps all else.</p>
              <p>Rating: ⭐️⭐️⭐️⭐️ (4/5)</p>
         </div>
-        <div class="review-section myanmar-review">
+        <div class="myanmar-review">
             <h2>Myanmar Review</h2>
             <p>
                 ကမ္ဘာပေါ်မှာ နိုင်ငံတွေအချင်းချင်း အရေးကြီးအချက်‌အလက်တွေကိုသုံးပြီး အသံတိတ်စစ်ဖြစ်နေတဲ့ခေတ်မှာ အရှေ့ဘက် Os‌tania နိုင်ငံမှ လက်ယာစွန်းရောက်ပါတီတစ်ခုကနေပြီးတော့ အနောက်ဘက် Westalis နိုင်ငံမှသံအမတ်ကို လုပ်ကြံသတ်ဖြတ်ပြီး စစ်မီးပျိုးချင်နေပါတယ်။
@@ -65,50 +68,40 @@
         </div>
     </div>
  </div> 
- <div id="image-links">
-    <div class="photo-section">
-        <h2 class="section-heading">Photos</h2>
-        <div class="photo-slider">
-            <div class="slider">
-                <!-- Figure Images -->
-                <div class="slide">
-                    <img src="Figure Images/spy1.jpg" alt="Figure Photo 1">
-                </div>
-                <div class="slide">
-                    <img src="Figure Images/spy2.jpg" alt="Figure Photo 2">
-                </div>
-                <div class="slide">
-                    <img src="Figure Images/spy3.jpg" alt="Figure Photo 3">
-                </div>
-
-                <!-- Anime Review Images -->
-                <div class="slide">
-                    <img src="Review Images/spy1.webp" alt="Anime Photo 1">
-                </div>
-                <div class="slide">
-                    <img src="Review Images/spy2.webp" alt="Anime Photo 2">
-                </div>
-                <div class="slide">
-                    <img src="Review Images/spy3.webp" alt="Anime Photo 3">
-                </div>
-            </div>
-        </div>
+    
+ <div class="carousel-container">
+    <div class="navigation">
+      <div class="prev nav-btn"><</div>
+      <div class="next nav-btn">></div>
     </div>
-    <button class="prev-button">Previous</button>
-    <button class="next-button">Next</button>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="./slider.js"></script>
-        <div class="trailer-section">
+    <div class="carousel">
+      <div class="item main">
+        <img src="Review Images/spy1.webp" alt="spy1"/>
+      </div>
+      <div class="item">
+        <img src="Review Images/spy2.webp" alt="spy2"/>
+      </div>
+      <div class="item">
+        <img src="Review Images/spy3.webp" alt="spy3"/>
+      </div>  
+      <div class="item">
+        <img src="Review Images/spy4.jpg" alt="spy3"/>
+      </div> 
+      <div class="item">
+        <img src="Review Images/spy5.jpg" alt="spy3"/>
+      </div>     
+    </div>
+  </div>
+  
+        <div id="trailer-section">
             <div class="trailer-box">
-                <h2>Watch the Trailer for Chainsaw-Man Here!</h2>
+                <h2>Watch the Trailer for Spy X Family Here!</h2>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/CCXLUQzuigw" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-        <div class="dvd-section">
+        <div id="dvd-section">
             <div class="dvd-box">
                 <h2>Get YOUR Spy X Family DVDs Now!</h2>
                 <p><b>NOTICE!! A New Movie is On Theatres Now!</b></p>
@@ -119,8 +112,11 @@
                     </div>
                     <!-- Add more DVD items as needed -->
                 </div>
+                <a href="../home.html" class="back H">&lt;&lt;Back to Home</a>
+                <a href="../animeshop.html" class="back M">Back to Menu>></a>
             </div>
         </div>
  </div>
+<script type="text/javascript" src="review js/spyxfamily.js"></script>
 </body>
 </html>

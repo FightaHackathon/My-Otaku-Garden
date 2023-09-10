@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function() {
             const imageLinks = document.querySelectorAll("#image-links img");
             imageLinks.forEach(image => {
@@ -20,7 +20,7 @@
                 image.parentNode.replaceChild(imageLink, image);
             });
         });
-        </script>
+        </script> -->
     <div class="header" style="background-image: url('https://www.intofilm.org/intofilm-production/scaledcropped/870x489https%3A/s3-eu-west-1.amazonaws.com/images.cdn.filmclub.org/film__16172-ponyo--hi_res-b2b0923d.jpg/film__16172-ponyo--hi_res-b2b0923d.jpg'); background-size: cover; background-position: center;">
         <h1>Anime Movie Review: Ponyo</h1>
     </div>
@@ -36,17 +36,14 @@
         <p><strong>Studio:</strong> Ghilbi</p>
     </div> 
 
-    
-
-
-        <div class="review-section english-review">
+        <div id="review-section">
             <h2>English Review</h2>
             <p>A goldfish sneaks away from home and floats off on the back of a jellyfish. After getting stuck in a glass jar, she drifts to the shore where she is freed by Sousuke, a five-year-old boy who lives with his mother Lisa in a house by the sea while his father Koichi works on a fishing boat. After healing a cut on Sousuke's finger by licking it, the goldfish is named Ponyo by her new friend.</p>
 
              <p> Unknown to Sousuke, Ponyo already has a name and a family. Her father Fujimoto, a sorcerer who forsook his humanity to live underwater, searches frantically for his daughter Brunhilde. When found and captured, Ponyo rejects her birth name and declares that she wants to become a human. Using the power received from Sousuke's blood, she grows arms and legs and escapes to the surface once more. But the magic released into the ocean causes an imbalance in nature, causing the Moon to start falling out of orbit and the tides to grow dangerously stronger. Reunited with Ponyo, Sousuke must pass an ancient test to restore order in the world and let his companion live on as a human.</p>
              <p>Rating: ⭐️⭐️⭐️⭐️ (4/5)</p>
         </div>
-        <div class="review-section myanmar-review">
+        <div class="myanmar-review">
             <h2>Myanmar Review</h2>
             <p>
                 အခုမိတ်ဆက်ပေးမှာက စာရေးသူ Hayao Miyazakiကိုယ်တိုင် ဒါရိုက်တာလုပ်ပြီIDM 7.7 အထိရခဲ့တဲ့ ဇာတ်ကားကောင်းလေးတစ်ကားပါဒီကားလေးရဲ့ အောင်မြင်မှုတွေကို ပြောရမယ်ဆိုရင်ပရိတ်သတ်တွေကြားမှာ Ponyo Ponyo
@@ -58,43 +55,34 @@
         </div>
     </div>
  </div> 
- <div id="image-links">
-    <div class="photo-section">
-        <h2 class="section-heading">Photos</h2>
-        <div class="photo-slider">
-            <div class="slider">
-                <!-- Figure Images -->
-                <div class="slide">
-                    <img src="Figure Images/Ponyo1.jpeg" alt="Figure Photo 1">
-                </div>
-                <div class="slide">
-                    <img src="Figure Images/ponyo2.webp" alt="Figure Photo 2">
-                </div>
-                <div class="slide">
-                    <img src="Figure Images/ponyo3.jpg" alt="Figure Photo 3">
-                </div>
 
-                <!-- Anime Review Images -->
-                <div class="slide">
-                    <img src="Review Images/Ponyo1.jpg" alt="Anime Photo 1">
-                </div>
-                <div class="slide">
-                    <img src="Review Images/ponyo2.jpg" alt="Anime Photo 2">
-                </div>
-                <div class="slide">
-                    <img src="Review Images/ponyo3.jpg" alt="Anime Photo 3">
-                </div>
-            </div>
-        </div>
+
+ <div class="carousel-container"> 
+    <div class="navigation">
+      <div class="prev nav-btn"><</div>
+      <div class="next nav-btn">></div>
     </div>
-    <button class="prev-button">Previous</button>
-    <button class="next-button">Next</button>
-</div>
+    <div class="carousel">
+      <div class="item main">
+        <img src="Review Images/ponyo1.jpg" alt="tr1" />
+      </div>
+      <div class="item">
+        <img src="Review Images/ponyo2.jpg" alt="tr2" />
+      </div>
+      <div class="item">
+        <img src="Review Images/ponyo3.jpg" alt="tr3" />
+      </div>    
+      <div class="item">
+        <img src="Review Images/ponyo4.webp" alt="tr3" />
+      </div> 
+      <div class="item">
+        <img src="Review Images/ponyo5.jpg" alt="tr3" />
+      </div>   
+    </div>
+  </div>
+  
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="./slider.js"></script>
-
-        <div class="trailer-section">
+        <div id="trailer-section">
             <div class="trailer-box">
                 <h2>Watch the Trailer for Ponyo Here!</h2>
                 <div class="video-container">
@@ -102,7 +90,7 @@
                 </div>
             </div>
         </div>
-        <div class="dvd-section">
+        <div id="dvd-section">
             <div class="dvd-box">
                 <h2>Get YOUR Ponyo DVDs Now!</h2>
                 <div class="dvd-images">
@@ -112,44 +100,11 @@
                     </div>
                     <!-- Add more DVD items as needed -->
                 </div>
+                <a href="../home.html" class="back H">&lt;&lt;Back to Home</a>
+                <a href="../animeshop.html" class="back M">Back to Menu>></a>
             </div>
         </div>
  </div>
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function () {
-        const slider = $(".slider");
-        const slides = $(".slide");
-        let currentIndex = 0;
-
-        // Function to move the slider to the next slide
-        function nextSlide() {
-            currentIndex++;
-            if (currentIndex >= slides.length) {
-                currentIndex = 0;
-            }
-            updateSlider();
-        }
-
-        // Function to move the slider to the previous slide
-        function prevSlide() {
-            currentIndex--;
-            if (currentIndex < 0) {
-                currentIndex = slides.length - 1;
-            }
-            updateSlider();
-        }
-
-        // Function to update the slider position
-        function updateSlider() {
-            const translateX = -currentIndex * 100 + "%";
-            slider.css("transform", `translateX(${translateX})`);
-        }
-
-        // Set up event listeners for next and previous buttons
-        $(".next-button").click(nextSlide);
-        $(".prev-button").click(prevSlide);
-    });
-</script>
+ <script type="text/javascript" src="review js/spyxfamily.js"></script>
 </body>
 </html>

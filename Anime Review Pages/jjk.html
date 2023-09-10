@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="animereview1.css">
+    <link rel="stylesheet" href="review css/jjk.css">
     <title>Anime Review Page</title>
 
 </head>
 <body>
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function() {
             const imageLinks = document.querySelectorAll("#image-links img");
             imageLinks.forEach(image => {
@@ -20,7 +20,7 @@
                 image.parentNode.replaceChild(imageLink, image);
             });
         });
-        </script>
+        </script> -->
     <div class="header" style="background-image: url('https://images3.alphacoders.com/114/1143698.jpg'); background-size: cover; background-position: center;">
         <h1>Anime Review: Jujutsu Kaisen</h1>
     </div>
@@ -37,13 +37,13 @@
     </div> 
 
 
-        <div class="review-section english-review">
+        <div id="review-section">
             <h2>English Review</h2>
             <p>Idly indulging in baseless paranormal activities with the Occult Club, high schooler Yuuji Itadori spends his days at either the clubroom or the hospital, where he visits his bedridden grandfather. However, this leisurely lifestyle soon takes a turn for the strange when he unknowingly encounters a cursed item. Triggering a chain of supernatural occurrences, Yuuji finds himself suddenly thrust into the world of Curses—dreadful beings formed from human malice and negativity—after swallowing the said item, revealed to be a finger belonging to the demon Sukuna Ryoumen, the "King of Curses."</p>
             <p> Yuuji experiences first-hand the threat these Curses pose to society as he discovers his own newfound powers. Introduced to the Tokyo Metropolitan Jujutsu Technical High School, he begins to walk down a path from which he cannot return—the path of a Jujutsu sorcerer.</p>
         </div>
 
-        <div class="review-section myanmar-review">
+        <div class="myanmar-review">
             <h2>Myanmar Review</h2>
             <p>
                 ဒီ လော က ကြီး မှာ Ryoumen Sukuna လို ခေါ် တဲ့ နတ် ဆိုး ကြီး ရဲ့ ခ န္ဓာ ကိုယ် အ စိတ် အ ပိုင်း တွေ ဟာ အ မြု တေ အ ဖြစ် နဲ့ ပျံ့ နှံ နေ ပါ တယ်
@@ -56,42 +56,32 @@
         </div>
     </div>
  </div> 
- <div id="image-links">
-    <div class="photo-section">
-        <h2 class="section-heading">Photos</h2>
-        <div class="photo-slider">
-            <div class="slider">
-                <!-- Figure Images -->
-                <div class="slide">
-                    <img src="Figure Images/jjk1.jpg" alt="Figure Photo 1">
-                </div>
-                <div class="slide">
-                    <img src="Figure Images/jjk2.jpg" alt="Figure Photo 2">
-                </div>
-                <div class="slide">
-                    <img src="Figure Images/jjk3.jpg" alt="Figure Photo 3">
-                </div>
-
-                <!-- Anime Review Images -->
-                <div class="slide">
-                    <img src="Review Images/jjk1.jpg" alt="Anime Photo 1">
-                </div>
-                <div class="slide">
-                    <img src="Review Images/jjk2.jpg" alt="Anime Photo 2">
-                </div>
-                <div class="slide">
-                    <img src="Review Images/jjk3.jpg" alt="Anime Photo 3">
-                </div>
-            </div>
-        </div>
+ 
+ <div class="carousel-container"> 
+    <div class="navigation">
+      <div class="prev nav-btn"><</div>
+      <div class="next nav-btn">></div>
     </div>
-    <button class="prev-button">Previous</button>
-    <button class="next-button">Next</button>
-</div>
+    <div class="carousel">
+      <div class="item main">
+        <img src="Review Images/jjk1.jpg" alt="tr1" />
+      </div>
+      <div class="item">
+        <img src="Review Images/jjk2.jpg" alt="tr2" />
+      </div>
+      <div class="item">
+        <img src="Review Images/jjk3.jpg" alt="tr2" />
+      </div>
+      <div class="item">
+        <img src="Review Images/jjk4.webp" alt="tr2" />
+      </div>
+      <div class="item">
+        <img src="Review Images/jjk5.png" alt="tr2" />
+      </div>
+    </div>
+  </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="./slider.js"></script>
-        <div class="trailer-section">
+        <div id="trailer-section">
             <div class="trailer-box">
                 <h2>Watch the Trailer For Jujutsu Kaisen Here!</h2>
                 <div class="video-container">
@@ -99,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <div class="dvd-section">
+        <div id="dvd-section">
             <div class="dvd-box">
                 <h2>Get Your JJK DVDS NOW!</h2>
                 <p><b>NOTICE!! SEASON 2 IS STILL ONGOING!</b></p>
@@ -114,8 +104,12 @@
                     </div>
                     <!-- Add more DVD items as needed -->
                 </div>
+                <a href="../home.html" class="back H">&lt;&lt;Back to Home</a>
+                <a href="../animeshop.html" class="back M">Back to Menu>></a>
             </div>
         </div>
  </div>
+ <script type="text/javascript" src="review js/spyxfamily.js"></script>
+
 </body>
 </html>
