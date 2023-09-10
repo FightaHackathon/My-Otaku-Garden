@@ -10,17 +10,42 @@ header {
   background-color: #a9c985;
   padding: 10px;
 }
+h2 {
+  font-family: 'Comic Sans MS', cursive;
+  color: black;
+  font-size: 30px;
+ }
+.reflective-border {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, green, transparent) 1;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+  transition: border-image 0.3s;
+}
 
+.reflective-border:hover {
+  border-image: linear-gradient(to right, transparent, green) 1;
+}
+
+b {
+  color: brown;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+}
+header{
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
 .review-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px;
+  padding-right: 20px;
 }
 
 .review {
   background-color: #c8e6c7;
   padding: 20px;
+  margin-right: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -37,14 +62,8 @@ header {
   border: 2px solid #fff; /* White border for paragraphs */
   padding: 10px;
 }
-
-.review img {
-  max-width: 100%;
-  height: auto;
-  margin: 10px 0;
-}
-
-.order-link {
+a.order-link {
+  margin-left: 310px;
   display: inline-block;
   background-color: #97c777;
   color: #fff;
@@ -56,39 +75,22 @@ header {
 
 .order-link:hover {
   background-color: #7db960;
+  text-decoration: none;
 }
 
 .review-images {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Center images vertically */
-  margin-bottom: 15px;
+  display: inline-flexbox;
+  
+  /* justify-content: space-between; */
 }
 
 .review-images img {
-  max-width: 150px; /* Adjust the width as needed */
+  width: 200px; /* Adjust the width as needed */
   height: auto;
-  border: 2px solid white;
   cursor: pointer;
+
 }
 
-.review-images img:hover {
-  border-color: red; /* Change border color on hover */
-}
-
-footer {
-  text-align: center;
-  background-color: #a9c985;
-  padding: 10px;
-}
-
-footer p {
-  margin: 0;
-  color: #fff;
-  background-color: #7db960; /* Green background color */
-  padding: 5px;
-  border-radius: 5px;
-}
 .review-text {
   text-align: justify;
   margin-top: 20px;
@@ -124,7 +126,7 @@ footer p {
 }
 
 .video-section h3 {
-  color: #a9c985;
+  color: #8ac447;
 }
 
 .video-section p {
@@ -136,4 +138,37 @@ footer p {
   max-width: 560px;
   height: 315px;
   border: none;
+}
+a.back {
+  display: inline-flex;
+  padding-top: 20px;
+}
+.H {
+  float: left;
+  
+}
+.M {
+  float: right;
+ 
+}
+a {
+  color: #ff0000; /* Green */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.footer {
+  text-align: center;
+  /* height: 100px; */
+  display: block;
+  padding-bottom: 0.05em;
+  padding-top: 0.05em;
+  font-family: "Comic Sans Ms";
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #7BE0B5;
 }
